@@ -7,8 +7,9 @@ library(dplyr)
 library(stringr)
 library(readxl)
 library(writexl)
+library(here)
 
-setwd("C:/Users/yeyem/OneDrive - King's College London/paper pablo/anexo digital")
+setwd(here())
 
 datos <- read_xlsx("datos/procesados/pdls_seguridad_metadata_revisados.xlsx") %>% subset(Revision ==1)
 
