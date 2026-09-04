@@ -8,8 +8,9 @@ library(purrr)
 library(httr)
 library(jsonlite)
 library(lubridate)
+library(here)
 
-setwd("C:/Users/yeyem/OneDrive - King's College London/paper pablo/anexo digital")
+setwd(here())
 
 bills <- read_xlsx("datos/raw/bbdd_pdl.xlsx")  
 
