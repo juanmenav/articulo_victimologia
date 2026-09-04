@@ -4,8 +4,9 @@ library(dplyr)
 library(tidyr)
 library(purrr)
 library(stringr)
+library(here)
 
-setwd("C:/Users/yeyem/OneDrive - King's College London/paper pablo/anexo digital")
+setwd(here())
 
 muestras_pablo <- read_xlsx("datos/muestras de validación/raw/muestra_pablo.xlsx") %>% mutate(id = paste0(ley, id)) 
 muestras_juan <- read_xlsx("datos/muestras de validación/raw/muestra_juan.xlsx") %>% mutate(id = paste0(ley, id))  
