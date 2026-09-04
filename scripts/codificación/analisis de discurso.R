@@ -7,8 +7,9 @@ library(jsonlite)
 library(stringr)
 library(readxl)
 library(writexl)
+library(here)
 
-setwd("C:/Users/yeyem/OneDrive - King's College London/paper pablo/anexo digital")
+setwd(here())
 
 readRenviron("scripts/analisis/.Renviron")
 setAPI(Sys.getenv("GEMINI_API_KEY"))
