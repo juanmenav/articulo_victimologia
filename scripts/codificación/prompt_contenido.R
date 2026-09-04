@@ -1,0 +1,24 @@
+prompt_instruccion <- "A partir de lo anterior, quiero análisis el contenido del discurso y extraigas la siguiente información basado exclusivamente en el texto entregado:
+- ID de del discurso.
+- Si hay referencia a las víctimas en abstracto 1, esto quiere decir que se habla de ellas en general, ya sea como concepto o cifras agregadas. Si hay referencia a víctimas en concreto 2, esto quiere decir que se refiere a víctimas en particular, ya sea con nombre y apellido o en referencia a casos concretos. Si no hay referencias 0. Por referencia a las víctimas debes entender tanto las alocuciones explícitas y textuales respecto de ellas como aquellas que pudieren estar refiriéndose a estas por medio de otras alocuciones sinónimas o similares (por ejemplo, persona afectada, perjudicada, dañada, etc.).
+- Enfoque: elige solo el más relevante para la alocución en estricta referencia a cómo se habla de la víctima. Las opciones:
+0 = No tiene un enfoque victimológico claro. 
+1 = Enfoque crítico abolicionista: refiere a discursos que hacen énfasis en el declive en importancia y poder de la víctima en los sistemas de justicia criminal modernos, proponiendo su reemplazo por sistemas alternativos basados en los principios del derecho civil o privado. A su vez, enfatizan en la devolución de la forma de resolver los conflictos criminales a las partes involucradas en ellos, restándole relevancia a los profesionales del sistema de justicia en dicho proceso. 
+2 = Enfoque rehabilitativo: refiere a discursos que hacen énfasis en el conflicto entre las partes (víctima y victimario) a raíz del delito y en cómo tratarlo o solucionarlo mediante intervenciones o políticas públicas enfocadas en la víctima, restándole relevancia al rol preponderante que clásicamente ha tenido el castigo en la sociedad como forma de solución de los delitos que ocurren en esta. Este enfoque ofrece una preocupación por la figura del ofensor a través del abordaje de la víctima, buscando justamente la rehabilitación del primero a través de medidas de corte no necesariamente retributivo, sino que centrándose en formas de generar efectos positivos en quien ofendió. 
+3 = Enfoque restaurativo: Refiere a discursos que hacen énfasis en la respuesta colectiva o comunitaria frente al delito que sufre una víctima individual, y no tanto en la naturaleza criminal o antisocial de la conducta desplegada. Se enfoca en los daños provocados a la víctima e intenta proponer formas de abordarlos y darles respuesta, orientadas hacia la reconciliación social y la restauración. Se le vincula normalmente con las prestaciones que nacen a propósito del welfare state, con una mirada más colectiva que individual. 
+4 = Retributivo: Refiere a discursos que operan bajo el principio de que el ofensor debe ser castigado de manera proporcional a la seriedad de la ofensa que cometió (just desserts) o, más específicamente, en atención al daño que dicha ofensa genera en la sociedad. Enfatiza el principio de que la mejor forma de compensar los males sufridos por la víctima es mediante el reflejo de ese mal en el quantum de la sanción impuesta al ofensor en la sentencia. La víctima pasa a jugar un rol tanto en las decisiones procedimentales del proceso penal, como en la sentencia definitiva condenatoria, pues es así como se plasmarían los deseos de retaliación, justicia o venganza de la víctima. 
+- Tipo de respuesta: 
+0 = no refiere a ninguno de los dos tipos. 
+1 = Convencional: Refiere a respuestas que se enfocan en reformar el sistema de justicia criminal entendido en términos clásicos, buscando mejorar las formas en que se reúne evidencia, se logran los objetivos de la investigación penal, y en que se provee servicios y respuestas a las víctimas. Descansan en mecanismos legales orientados a lograr una mejor persecución penal a través del trabajo de fiscales y tribunales de justicia. Buscan a su vez lograr un mejor sistema de justicia punitivo que responda de mejor manera a las víctimas. 
+2 = Innovadora: Se refiere a una amplia variedad de respuesta institucionales que buscan dar respuesta a las necesidades de las víctimas (ej. reconocimiento, reparación, etc.). Pueden operar por dentro, por fuera, o en tándem con el sistema de justicia convencional. Normalmente incluyen mecanismos informales de obtención de justicia, así como también respuestas experimentales. Buscan dar respuesta a las necesidades e intereses que las víctimas tienen y que raramente son atendidas por los mecanismos convencionales o por las vías retributivas.
+
+Genera un archivo JSON con los resultados."
+
+json_estructura <- 'Ahora responde exclusivamente en formato JSON válido. Tu respuesta debe ser ÚNICAMENTE el objeto JSON, comenzando con "{" y terminando con "}". 
+Estructura requerida:
+{
+  "id":"ID del párrafo",
+  "victima": "0|1|2",
+  "enfoque" : "0|1|2|3|4",
+  "tipo": "0|1|2"
+}'
