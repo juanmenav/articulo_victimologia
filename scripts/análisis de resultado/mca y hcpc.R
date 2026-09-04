@@ -6,8 +6,9 @@ library(writexl)
 library(ggrepel)
 library(FactoMineR)
 library(factoextra)
+library(here)
 
-setwd("C:/Users/yeyem/OneDrive - King's College London/paper pablo/anexo digital")
+setwd(here())
 
 datos <- read_xlsx("datos/output/bbdd_final.xlsx") %>% mutate(mujer = as.numeric(mujer)) %>% subset(!is.na(conexion))
 
