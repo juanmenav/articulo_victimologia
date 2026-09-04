@@ -1,6 +1,10 @@
 library(readxl)
+library(dplyr)
+library(tidyr)
+library(writexl)
+library(here)
 
-setwd("C:/Users/yeyem/OneDrive - King's College London/paper pablo/anexo digital")
+setwd(here())
 
 datos <- read_xlsx("datos/output/bbdd_final.xlsx")
 
