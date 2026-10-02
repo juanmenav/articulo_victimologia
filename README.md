@@ -1,7 +1,7 @@
 # articulo_victimologia
-Anexo digital con las bases de datos, muestras de validación y scripts de R .
+Anexo digital junto a las bases de datos, muestras de validación y scripts de R .
 
-En el siguiente repositorio digital de GitHub se encontrarán todos los datos y scripts de replicabilidad, partiendo por los datos crudos extraídos desde las fuentes de origen, las bases de datos intermedias y finales, hasta los scripts de extracción, procesamiento y análisis de los datos. Además, se encuentra un set de replicabilidad de los test de validación implementados. 
+En el siguiente repositorio digital de GitHub, a parte de los anexos metodológicos N°1 al N°4, se encuentran todos los datos y scripts de replicabilidad, partiendo por los datos sin procesar directamente extraídos desde las fuentes de origen, las bases de datos intermedias y finales, además de los scripts de extracción, procesamiento y análisis de los datos. También, se encuentra un set de replicabilidad de los test de validación implementados. 
 
 Los paquetes de R que se requieren son los siguientes:
 
